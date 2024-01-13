@@ -345,7 +345,7 @@ Creates a new tile at coordinates ``atlas_coords`` with the given ``size``.
 
 :ref:`Vector2i<class_Vector2i>` **get_atlas_grid_size** **(** **)** |const|
 
-Returns the atlas grid size, which depends on how many tiles can fit in the texture. It thus depends on the Texture's size, the atlas ``margins`` the tiles' ``texture_region_size``.
+Returns the atlas grid size, which depends on how many tiles can fit in the texture. It thus depends on the :ref:`texture<class_TileSetAtlasSource_property_texture>`'s size, the atlas :ref:`margins<class_TileSetAtlasSource_property_margins>`, and the tiles' :ref:`texture_region_size<class_TileSetAtlasSource_property_texture_region_size>`.
 
 .. rst-class:: classref-item-separator
 
@@ -431,7 +431,7 @@ Returns how many animation frames has the tile at coordinates ``atlas_coords``.
 
 :ref:`TileAnimationMode<enum_TileSetAtlasSource_TileAnimationMode>` **get_tile_animation_mode** **(** :ref:`Vector2i<class_Vector2i>` atlas_coords **)** |const|
 
-Returns the :ref:`TileAnimationMode<enum_TileSetAtlasSource_TileAnimationMode>` of the tile at ``atlas_coords``. See also :ref:`set_tile_animation_mode<class_TileSetAtlasSource_method_set_tile_animation_mode>`.
+Returns the tile animation mode of the tile at ``atlas_coords``. See also :ref:`set_tile_animation_mode<class_TileSetAtlasSource_method_set_tile_animation_mode>`.
 
 .. rst-class:: classref-item-separator
 
@@ -655,7 +655,7 @@ Sets how many animation frames the tile at coordinates ``atlas_coords`` has.
 
 void **set_tile_animation_mode** **(** :ref:`Vector2i<class_Vector2i>` atlas_coords, :ref:`TileAnimationMode<enum_TileSetAtlasSource_TileAnimationMode>` mode **)**
 
-Sets the :ref:`TileAnimationMode<enum_TileSetAtlasSource_TileAnimationMode>` of the tile at ``atlas_coords`` to ``mode``. See also :ref:`get_tile_animation_mode<class_TileSetAtlasSource_method_get_tile_animation_mode>`.
+Sets the tile animation mode of the tile at ``atlas_coords`` to ``mode``. See also :ref:`get_tile_animation_mode<class_TileSetAtlasSource_method_get_tile_animation_mode>`.
 
 .. rst-class:: classref-item-separator
 
