@@ -48,13 +48,13 @@ Methods
 .. table::
    :widths: auto
 
-   +-------------------------+----------------------------------------------------------+
-   | void                    | :ref:`lock<class_Mutex_method_lock>` **(** **)**         |
-   +-------------------------+----------------------------------------------------------+
-   | :ref:`bool<class_bool>` | :ref:`try_lock<class_Mutex_method_try_lock>` **(** **)** |
-   +-------------------------+----------------------------------------------------------+
-   | void                    | :ref:`unlock<class_Mutex_method_unlock>` **(** **)**     |
-   +-------------------------+----------------------------------------------------------+
+   +-------------------------+----------------------------------------------------+
+   | |void|                  | :ref:`lock<class_Mutex_method_lock>`\ (\ )         |
+   +-------------------------+----------------------------------------------------+
+   | :ref:`bool<class_bool>` | :ref:`try_lock<class_Mutex_method_try_lock>`\ (\ ) |
+   +-------------------------+----------------------------------------------------+
+   | |void|                  | :ref:`unlock<class_Mutex_method_unlock>`\ (\ )     |
+   +-------------------------+----------------------------------------------------+
 
 .. rst-class:: classref-section-separator
 
@@ -69,7 +69,7 @@ Method Descriptions
 
 .. rst-class:: classref-method
 
-void **lock** **(** **)**
+|void| **lock**\ (\ ) :ref:`🔗<class_Mutex_method_lock>`
 
 Locks this **Mutex**, blocks until it is unlocked by the current owner.
 
@@ -83,7 +83,7 @@ Locks this **Mutex**, blocks until it is unlocked by the current owner.
 
 .. rst-class:: classref-method
 
-:ref:`bool<class_bool>` **try_lock** **(** **)**
+:ref:`bool<class_bool>` **try_lock**\ (\ ) :ref:`🔗<class_Mutex_method_try_lock>`
 
 Tries locking this **Mutex**, but does not block. Returns ``true`` on success, ``false`` otherwise.
 
@@ -97,13 +97,13 @@ Tries locking this **Mutex**, but does not block. Returns ``true`` on success, `
 
 .. rst-class:: classref-method
 
-void **unlock** **(** **)**
+|void| **unlock**\ (\ ) :ref:`🔗<class_Mutex_method_unlock>`
 
 Unlocks this **Mutex**, leaving it to other threads.
 
-\ **Note:** If a thread called :ref:`lock<class_Mutex_method_lock>` or :ref:`try_lock<class_Mutex_method_try_lock>` multiple times while already having ownership of the mutex, it must also call :ref:`unlock<class_Mutex_method_unlock>` the same number of times in order to unlock it correctly.
+\ **Note:** If a thread called :ref:`lock()<class_Mutex_method_lock>` or :ref:`try_lock()<class_Mutex_method_try_lock>` multiple times while already having ownership of the mutex, it must also call :ref:`unlock()<class_Mutex_method_unlock>` the same number of times in order to unlock it correctly.
 
-\ **Warning:** Calling :ref:`unlock<class_Mutex_method_unlock>` more times that :ref:`lock<class_Mutex_method_lock>` on a given thread, thus ending up trying to unlock a non-locked mutex, is wrong and may causes crashes or deadlocks.
+\ **Warning:** Calling :ref:`unlock()<class_Mutex_method_unlock>` more times that :ref:`lock()<class_Mutex_method_lock>` on a given thread, thus ending up trying to unlock a non-locked mutex, is wrong and may causes crashes or deadlocks.
 
 .. |virtual| replace:: :abbr:`virtual (This method should typically be overridden by the user to have any effect.)`
 .. |const| replace:: :abbr:`const (This method has no side effects. It doesn't modify any of the instance's member variables.)`
@@ -112,3 +112,4 @@ Unlocks this **Mutex**, leaving it to other threads.
 .. |static| replace:: :abbr:`static (This method doesn't need an instance to be called, so it can be called directly using the class name.)`
 .. |operator| replace:: :abbr:`operator (This method describes a valid operator to use with this type as left-hand operand.)`
 .. |bitfield| replace:: :abbr:`BitField (This value is an integer composed as a bitmask of the following flags.)`
+.. |void| replace:: :abbr:`void (No return value.)`
