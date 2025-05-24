@@ -31,11 +31,13 @@ Properties
 .. table::
    :widths: auto
 
-   +---------------------------+-----------------------------------------------------+----------+
-   | :ref:`float<class_float>` | :ref:`height<class_CapsuleShape2D_property_height>` | ``30.0`` |
-   +---------------------------+-----------------------------------------------------+----------+
-   | :ref:`float<class_float>` | :ref:`radius<class_CapsuleShape2D_property_radius>` | ``10.0`` |
-   +---------------------------+-----------------------------------------------------+----------+
+   +---------------------------+-------------------------------------------------------------+----------+
+   | :ref:`float<class_float>` | :ref:`height<class_CapsuleShape2D_property_height>`         | ``30.0`` |
+   +---------------------------+-------------------------------------------------------------+----------+
+   | :ref:`float<class_float>` | :ref:`mid_height<class_CapsuleShape2D_property_mid_height>` |          |
+   +---------------------------+-------------------------------------------------------------+----------+
+   | :ref:`float<class_float>` | :ref:`radius<class_CapsuleShape2D_property_radius>`         | ``10.0`` |
+   +---------------------------+-------------------------------------------------------------+----------+
 
 .. rst-class:: classref-section-separator
 
@@ -50,14 +52,31 @@ Property Descriptions
 
 .. rst-class:: classref-property
 
-:ref:`float<class_float>` **height** = ``30.0``
+:ref:`float<class_float>` **height** = ``30.0`` :ref:`🔗<class_CapsuleShape2D_property_height>`
 
 .. rst-class:: classref-property-setget
 
-- void **set_height** **(** :ref:`float<class_float>` value **)**
-- :ref:`float<class_float>` **get_height** **(** **)**
+- |void| **set_height**\ (\ value\: :ref:`float<class_float>`\ )
+- :ref:`float<class_float>` **get_height**\ (\ )
 
-The capsule's height.
+The capsule's full height, including the semicircles.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_CapsuleShape2D_property_mid_height:
+
+.. rst-class:: classref-property
+
+:ref:`float<class_float>` **mid_height** :ref:`🔗<class_CapsuleShape2D_property_mid_height>`
+
+.. rst-class:: classref-property-setget
+
+- |void| **set_mid_height**\ (\ value\: :ref:`float<class_float>`\ )
+- :ref:`float<class_float>` **get_mid_height**\ (\ )
+
+The capsule's height, excluding the semicircles. This is the height of the central rectangular part in the middle of the capsule, and is the distance between the centers of the two semicircles. This is a wrapper for :ref:`height<class_CapsuleShape2D_property_height>`.
 
 .. rst-class:: classref-item-separator
 
@@ -67,12 +86,12 @@ The capsule's height.
 
 .. rst-class:: classref-property
 
-:ref:`float<class_float>` **radius** = ``10.0``
+:ref:`float<class_float>` **radius** = ``10.0`` :ref:`🔗<class_CapsuleShape2D_property_radius>`
 
 .. rst-class:: classref-property-setget
 
-- void **set_radius** **(** :ref:`float<class_float>` value **)**
-- :ref:`float<class_float>` **get_radius** **(** **)**
+- |void| **set_radius**\ (\ value\: :ref:`float<class_float>`\ )
+- :ref:`float<class_float>` **get_radius**\ (\ )
 
 The capsule's radius.
 
@@ -83,3 +102,4 @@ The capsule's radius.
 .. |static| replace:: :abbr:`static (This method doesn't need an instance to be called, so it can be called directly using the class name.)`
 .. |operator| replace:: :abbr:`operator (This method describes a valid operator to use with this type as left-hand operand.)`
 .. |bitfield| replace:: :abbr:`BitField (This value is an integer composed as a bitmask of the following flags.)`
+.. |void| replace:: :abbr:`void (No return value.)`
