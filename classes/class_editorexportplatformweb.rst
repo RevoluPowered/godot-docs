@@ -16,6 +16,15 @@ Exporter for the Web.
 
 .. rst-class:: classref-introduction-group
 
+Description
+-----------
+
+The Web exporter customizes how a web build is handled. In the editor's "Export" window, it is created when adding a new "Web" preset.
+
+\ **Note:** Godot on Web is rendered inside a ``<canvas>`` tag. Normally, the canvas cannot be positioned or resized manually, but otherwise acts as the main :ref:`Window<class_Window>` of the application.
+
+.. rst-class:: classref-introduction-group
+
 Tutorials
 ---------
 
@@ -31,45 +40,53 @@ Properties
 .. table::
    :widths: auto
 
-   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`String<class_String>` | :ref:`custom_template/debug<class_EditorExportPlatformWeb_property_custom_template/debug>`                               |
-   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`String<class_String>` | :ref:`custom_template/release<class_EditorExportPlatformWeb_property_custom_template/release>`                           |
-   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`int<class_int>`       | :ref:`html/canvas_resize_policy<class_EditorExportPlatformWeb_property_html/canvas_resize_policy>`                       |
-   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`String<class_String>` | :ref:`html/custom_html_shell<class_EditorExportPlatformWeb_property_html/custom_html_shell>`                             |
-   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`bool<class_bool>`     | :ref:`html/experimental_virtual_keyboard<class_EditorExportPlatformWeb_property_html/experimental_virtual_keyboard>`     |
-   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`bool<class_bool>`     | :ref:`html/export_icon<class_EditorExportPlatformWeb_property_html/export_icon>`                                         |
-   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`bool<class_bool>`     | :ref:`html/focus_canvas_on_start<class_EditorExportPlatformWeb_property_html/focus_canvas_on_start>`                     |
-   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`String<class_String>` | :ref:`html/head_include<class_EditorExportPlatformWeb_property_html/head_include>`                                       |
-   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`Color<class_Color>`   | :ref:`progressive_web_app/background_color<class_EditorExportPlatformWeb_property_progressive_web_app/background_color>` |
-   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`int<class_int>`       | :ref:`progressive_web_app/display<class_EditorExportPlatformWeb_property_progressive_web_app/display>`                   |
-   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`bool<class_bool>`     | :ref:`progressive_web_app/enabled<class_EditorExportPlatformWeb_property_progressive_web_app/enabled>`                   |
-   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`String<class_String>` | :ref:`progressive_web_app/icon_144x144<class_EditorExportPlatformWeb_property_progressive_web_app/icon_144x144>`         |
-   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`String<class_String>` | :ref:`progressive_web_app/icon_180x180<class_EditorExportPlatformWeb_property_progressive_web_app/icon_180x180>`         |
-   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`String<class_String>` | :ref:`progressive_web_app/icon_512x512<class_EditorExportPlatformWeb_property_progressive_web_app/icon_512x512>`         |
-   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`String<class_String>` | :ref:`progressive_web_app/offline_page<class_EditorExportPlatformWeb_property_progressive_web_app/offline_page>`         |
-   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`int<class_int>`       | :ref:`progressive_web_app/orientation<class_EditorExportPlatformWeb_property_progressive_web_app/orientation>`           |
-   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`bool<class_bool>`     | :ref:`variant/extensions_support<class_EditorExportPlatformWeb_property_variant/extensions_support>`                     |
-   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`bool<class_bool>`     | :ref:`vram_texture_compression/for_desktop<class_EditorExportPlatformWeb_property_vram_texture_compression/for_desktop>` |
-   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------+
-   | :ref:`bool<class_bool>`     | :ref:`vram_texture_compression/for_mobile<class_EditorExportPlatformWeb_property_vram_texture_compression/for_mobile>`   |
-   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------+
+   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>` | :ref:`custom_template/debug<class_EditorExportPlatformWeb_property_custom_template/debug>`                                                                         |
+   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>` | :ref:`custom_template/release<class_EditorExportPlatformWeb_property_custom_template/release>`                                                                     |
+   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`int<class_int>`       | :ref:`html/canvas_resize_policy<class_EditorExportPlatformWeb_property_html/canvas_resize_policy>`                                                                 |
+   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>` | :ref:`html/custom_html_shell<class_EditorExportPlatformWeb_property_html/custom_html_shell>`                                                                       |
+   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`bool<class_bool>`     | :ref:`html/experimental_virtual_keyboard<class_EditorExportPlatformWeb_property_html/experimental_virtual_keyboard>`                                               |
+   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`bool<class_bool>`     | :ref:`html/export_icon<class_EditorExportPlatformWeb_property_html/export_icon>`                                                                                   |
+   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`bool<class_bool>`     | :ref:`html/focus_canvas_on_start<class_EditorExportPlatformWeb_property_html/focus_canvas_on_start>`                                                               |
+   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>` | :ref:`html/head_include<class_EditorExportPlatformWeb_property_html/head_include>`                                                                                 |
+   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`Color<class_Color>`   | :ref:`progressive_web_app/background_color<class_EditorExportPlatformWeb_property_progressive_web_app/background_color>`                                           |
+   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`int<class_int>`       | :ref:`progressive_web_app/display<class_EditorExportPlatformWeb_property_progressive_web_app/display>`                                                             |
+   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`bool<class_bool>`     | :ref:`progressive_web_app/enabled<class_EditorExportPlatformWeb_property_progressive_web_app/enabled>`                                                             |
+   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`bool<class_bool>`     | :ref:`progressive_web_app/ensure_cross_origin_isolation_headers<class_EditorExportPlatformWeb_property_progressive_web_app/ensure_cross_origin_isolation_headers>` |
+   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>` | :ref:`progressive_web_app/icon_144x144<class_EditorExportPlatformWeb_property_progressive_web_app/icon_144x144>`                                                   |
+   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>` | :ref:`progressive_web_app/icon_180x180<class_EditorExportPlatformWeb_property_progressive_web_app/icon_180x180>`                                                   |
+   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>` | :ref:`progressive_web_app/icon_512x512<class_EditorExportPlatformWeb_property_progressive_web_app/icon_512x512>`                                                   |
+   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`String<class_String>` | :ref:`progressive_web_app/offline_page<class_EditorExportPlatformWeb_property_progressive_web_app/offline_page>`                                                   |
+   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`int<class_int>`       | :ref:`progressive_web_app/orientation<class_EditorExportPlatformWeb_property_progressive_web_app/orientation>`                                                     |
+   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`int<class_int>`       | :ref:`threads/emscripten_pool_size<class_EditorExportPlatformWeb_property_threads/emscripten_pool_size>`                                                           |
+   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`int<class_int>`       | :ref:`threads/godot_pool_size<class_EditorExportPlatformWeb_property_threads/godot_pool_size>`                                                                     |
+   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`bool<class_bool>`     | :ref:`variant/extensions_support<class_EditorExportPlatformWeb_property_variant/extensions_support>`                                                               |
+   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`bool<class_bool>`     | :ref:`variant/thread_support<class_EditorExportPlatformWeb_property_variant/thread_support>`                                                                       |
+   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`bool<class_bool>`     | :ref:`vram_texture_compression/for_desktop<class_EditorExportPlatformWeb_property_vram_texture_compression/for_desktop>`                                           |
+   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`bool<class_bool>`     | :ref:`vram_texture_compression/for_mobile<class_EditorExportPlatformWeb_property_vram_texture_compression/for_mobile>`                                             |
+   +-----------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 .. rst-class:: classref-section-separator
 
@@ -84,9 +101,9 @@ Property Descriptions
 
 .. rst-class:: classref-property
 
-:ref:`String<class_String>` **custom_template/debug**
+:ref:`String<class_String>` **custom_template/debug** :ref:`🔗<class_EditorExportPlatformWeb_property_custom_template/debug>`
 
-Path to the custom export template. If left empty, default template is used.
+File path to the custom export template used for debug builds. If left empty, the default template is used.
 
 .. rst-class:: classref-item-separator
 
@@ -96,9 +113,9 @@ Path to the custom export template. If left empty, default template is used.
 
 .. rst-class:: classref-property
 
-:ref:`String<class_String>` **custom_template/release**
+:ref:`String<class_String>` **custom_template/release** :ref:`🔗<class_EditorExportPlatformWeb_property_custom_template/release>`
 
-Path to the custom export template. If left empty, default template is used.
+File path to the custom export template used for release builds. If left empty, the default template is used.
 
 .. rst-class:: classref-item-separator
 
@@ -108,9 +125,15 @@ Path to the custom export template. If left empty, default template is used.
 
 .. rst-class:: classref-property
 
-:ref:`int<class_int>` **html/canvas_resize_policy**
+:ref:`int<class_int>` **html/canvas_resize_policy** :ref:`🔗<class_EditorExportPlatformWeb_property_html/canvas_resize_policy>`
 
-The canvas resize policy determines how the canvas should be resized by Godot.
+Determines how the canvas should be resized by Godot.
+
+- **None:** The canvas is not automatically resized.
+
+- **Project:** The size of the canvas is dependent on the :ref:`ProjectSettings<class_ProjectSettings>`.
+
+- **Adaptive:** The canvas is automatically resized to fit as much of the web page as possible.
 
 .. rst-class:: classref-item-separator
 
@@ -120,11 +143,11 @@ The canvas resize policy determines how the canvas should be resized by Godot.
 
 .. rst-class:: classref-property
 
-:ref:`String<class_String>` **html/custom_html_shell**
+:ref:`String<class_String>` **html/custom_html_shell** :ref:`🔗<class_EditorExportPlatformWeb_property_html/custom_html_shell>`
 
-.. container:: contribute
+The custom HTML page that wraps the exported web build. If left empty, the default HTML shell is used.
 
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+For more information, see the :doc:`Customizing HTML5 Shell <../tutorials/platform/web/customizing_html5_shell>` tutorial.
 
 .. rst-class:: classref-item-separator
 
@@ -134,11 +157,11 @@ The canvas resize policy determines how the canvas should be resized by Godot.
 
 .. rst-class:: classref-property
 
-:ref:`bool<class_bool>` **html/experimental_virtual_keyboard**
+:ref:`bool<class_bool>` **html/experimental_virtual_keyboard** :ref:`🔗<class_EditorExportPlatformWeb_property_html/experimental_virtual_keyboard>`
 
-.. container:: contribute
+**Experimental:** This property may be changed or removed in future versions.
 
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+If ``true``, embeds support for a virtual keyboard into the web page, which is shown when necessary on touchscreen devices.
 
 .. rst-class:: classref-item-separator
 
@@ -148,11 +171,9 @@ The canvas resize policy determines how the canvas should be resized by Godot.
 
 .. rst-class:: classref-property
 
-:ref:`bool<class_bool>` **html/export_icon**
+:ref:`bool<class_bool>` **html/export_icon** :ref:`🔗<class_EditorExportPlatformWeb_property_html/export_icon>`
 
-.. container:: contribute
-
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+If ``true``, the project icon will be used as the favicon for this application's web page.
 
 .. rst-class:: classref-item-separator
 
@@ -162,11 +183,9 @@ The canvas resize policy determines how the canvas should be resized by Godot.
 
 .. rst-class:: classref-property
 
-:ref:`bool<class_bool>` **html/focus_canvas_on_start**
+:ref:`bool<class_bool>` **html/focus_canvas_on_start** :ref:`🔗<class_EditorExportPlatformWeb_property_html/focus_canvas_on_start>`
 
-.. container:: contribute
-
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+If ``true``, the canvas will be focused as soon as the application is loaded, if the browser window is already in focus.
 
 .. rst-class:: classref-item-separator
 
@@ -176,11 +195,11 @@ The canvas resize policy determines how the canvas should be resized by Godot.
 
 .. rst-class:: classref-property
 
-:ref:`String<class_String>` **html/head_include**
+:ref:`String<class_String>` **html/head_include** :ref:`🔗<class_EditorExportPlatformWeb_property_html/head_include>`
 
-.. container:: contribute
+Additional HTML tags to include inside the ``<head>``, such as ``<meta>`` tags.
 
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+\ **Note:** You do not need to add a ``<title>`` tag, as it is automatically included based on the project's name.
 
 .. rst-class:: classref-item-separator
 
@@ -190,11 +209,9 @@ The canvas resize policy determines how the canvas should be resized by Godot.
 
 .. rst-class:: classref-property
 
-:ref:`Color<class_Color>` **progressive_web_app/background_color**
+:ref:`Color<class_Color>` **progressive_web_app/background_color** :ref:`🔗<class_EditorExportPlatformWeb_property_progressive_web_app/background_color>`
 
-.. container:: contribute
-
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+The background color used behind the web application.
 
 .. rst-class:: classref-item-separator
 
@@ -204,11 +221,17 @@ The canvas resize policy determines how the canvas should be resized by Godot.
 
 .. rst-class:: classref-property
 
-:ref:`int<class_int>` **progressive_web_app/display**
+:ref:`int<class_int>` **progressive_web_app/display** :ref:`🔗<class_EditorExportPlatformWeb_property_progressive_web_app/display>`
 
-.. container:: contribute
+The `display mode <https://developer.mozilla.org/en-US/docs/Web/Manifest/display/>`__ to use for this progressive web application. Different browsers and platforms may not behave the same.
 
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+- **Fullscreen:** Displays the app in fullscreen and hides all of the browser's UI elements.
+
+- **Standalone:** Displays the app in a separate window and hides all of the browser's UI elements.
+
+- **Minimal UI:** Displays the app in a separate window and only shows the browser's UI elements for navigation.
+
+- **Browser:** Displays the app as a normal web page.
 
 .. rst-class:: classref-item-separator
 
@@ -218,11 +241,23 @@ The canvas resize policy determines how the canvas should be resized by Godot.
 
 .. rst-class:: classref-property
 
-:ref:`bool<class_bool>` **progressive_web_app/enabled**
+:ref:`bool<class_bool>` **progressive_web_app/enabled** :ref:`🔗<class_EditorExportPlatformWeb_property_progressive_web_app/enabled>`
 
-.. container:: contribute
+If ``true``, turns this web build into a `progressive web application <https://en.wikipedia.org/wiki/Progressive_web_app>`__ (PWA).
 
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorExportPlatformWeb_property_progressive_web_app/ensure_cross_origin_isolation_headers:
+
+.. rst-class:: classref-property
+
+:ref:`bool<class_bool>` **progressive_web_app/ensure_cross_origin_isolation_headers** :ref:`🔗<class_EditorExportPlatformWeb_property_progressive_web_app/ensure_cross_origin_isolation_headers>`
+
+When enabled, the progressive web app will make sure that each request has cross-origin isolation headers (COEP/COOP).
+
+This can simplify the setup to serve the exported game.
 
 .. rst-class:: classref-item-separator
 
@@ -232,11 +267,11 @@ The canvas resize policy determines how the canvas should be resized by Godot.
 
 .. rst-class:: classref-property
 
-:ref:`String<class_String>` **progressive_web_app/icon_144x144**
+:ref:`String<class_String>` **progressive_web_app/icon_144x144** :ref:`🔗<class_EditorExportPlatformWeb_property_progressive_web_app/icon_144x144>`
 
-.. container:: contribute
+File path to the smallest icon for this web application. If not defined, defaults to the project icon.
 
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+\ **Note:** If the icon is not 144×144, it will be automatically resized for the final build.
 
 .. rst-class:: classref-item-separator
 
@@ -246,11 +281,11 @@ The canvas resize policy determines how the canvas should be resized by Godot.
 
 .. rst-class:: classref-property
 
-:ref:`String<class_String>` **progressive_web_app/icon_180x180**
+:ref:`String<class_String>` **progressive_web_app/icon_180x180** :ref:`🔗<class_EditorExportPlatformWeb_property_progressive_web_app/icon_180x180>`
 
-.. container:: contribute
+File path to the small icon for this web application. If not defined, defaults to the project icon.
 
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+\ **Note:** If the icon is not 180×180, it will be automatically resized for the final build.
 
 .. rst-class:: classref-item-separator
 
@@ -260,11 +295,11 @@ The canvas resize policy determines how the canvas should be resized by Godot.
 
 .. rst-class:: classref-property
 
-:ref:`String<class_String>` **progressive_web_app/icon_512x512**
+:ref:`String<class_String>` **progressive_web_app/icon_512x512** :ref:`🔗<class_EditorExportPlatformWeb_property_progressive_web_app/icon_512x512>`
 
-.. container:: contribute
+File path to the largest icon for this web application. If not defined, defaults to the project icon.
 
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+\ **Note:** If the icon is not 512×512, it will be automatically resized for the final build.
 
 .. rst-class:: classref-item-separator
 
@@ -274,11 +309,9 @@ The canvas resize policy determines how the canvas should be resized by Godot.
 
 .. rst-class:: classref-property
 
-:ref:`String<class_String>` **progressive_web_app/offline_page**
+:ref:`String<class_String>` **progressive_web_app/offline_page** :ref:`🔗<class_EditorExportPlatformWeb_property_progressive_web_app/offline_page>`
 
-.. container:: contribute
-
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+The page to display, should the server hosting the page not be available. This page is saved in the client's machine.
 
 .. rst-class:: classref-item-separator
 
@@ -288,11 +321,43 @@ The canvas resize policy determines how the canvas should be resized by Godot.
 
 .. rst-class:: classref-property
 
-:ref:`int<class_int>` **progressive_web_app/orientation**
+:ref:`int<class_int>` **progressive_web_app/orientation** :ref:`🔗<class_EditorExportPlatformWeb_property_progressive_web_app/orientation>`
 
-.. container:: contribute
+The orientation to use when the web application is run through a mobile device.
 
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+- **Any:** No orientation is forced.
+
+- **Landscape:** Forces a horizontal layout (wider than it is taller).
+
+- **Portrait:** Forces a vertical layout (taller than it is wider).
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorExportPlatformWeb_property_threads/emscripten_pool_size:
+
+.. rst-class:: classref-property
+
+:ref:`int<class_int>` **threads/emscripten_pool_size** :ref:`🔗<class_EditorExportPlatformWeb_property_threads/emscripten_pool_size>`
+
+The number of threads that emscripten will allocate at startup. A smaller value will allocate fewer threads and consume fewer system resources, but you may run the risk of running out of threads in the pool and needing to allocate more threads at run time which may cause a deadlock.
+
+\ **Note:** Some browsers have a hard cap on the number of threads that can be allocated, so it is best to be cautious and keep this number low.
+
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorExportPlatformWeb_property_threads/godot_pool_size:
+
+.. rst-class:: classref-property
+
+:ref:`int<class_int>` **threads/godot_pool_size** :ref:`🔗<class_EditorExportPlatformWeb_property_threads/godot_pool_size>`
+
+Override for the default size of the :ref:`WorkerThreadPool<class_WorkerThreadPool>`. This setting is used when :ref:`ProjectSettings.threading/worker_pool/max_threads<class_ProjectSettings_property_threading/worker_pool/max_threads>` size is set to -1 (which it is by default). This size must be smaller than :ref:`threads/emscripten_pool_size<class_EditorExportPlatformWeb_property_threads/emscripten_pool_size>` otherwise deadlocks may occur.
+
+When using threads this size needs to be large enough to accommodate features that rely on having a dedicated thread like :ref:`ProjectSettings.physics/2d/run_on_separate_thread<class_ProjectSettings_property_physics/2d/run_on_separate_thread>` or :ref:`ProjectSettings.rendering/driver/threads/thread_model<class_ProjectSettings_property_rendering/driver/threads/thread_model>`. In general, it is best to ensure that this is at least 4 and is at least 2 or 3 less than :ref:`threads/emscripten_pool_size<class_EditorExportPlatformWeb_property_threads/emscripten_pool_size>`.
 
 .. rst-class:: classref-item-separator
 
@@ -302,11 +367,23 @@ The canvas resize policy determines how the canvas should be resized by Godot.
 
 .. rst-class:: classref-property
 
-:ref:`bool<class_bool>` **variant/extensions_support**
+:ref:`bool<class_bool>` **variant/extensions_support** :ref:`🔗<class_EditorExportPlatformWeb_property_variant/extensions_support>`
 
-.. container:: contribute
+If ``true`` enables :ref:`GDExtension<class_GDExtension>` support for this web build.
 
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+.. rst-class:: classref-item-separator
+
+----
+
+.. _class_EditorExportPlatformWeb_property_variant/thread_support:
+
+.. rst-class:: classref-property
+
+:ref:`bool<class_bool>` **variant/thread_support** :ref:`🔗<class_EditorExportPlatformWeb_property_variant/thread_support>`
+
+If ``true``, the exported game will support threads. It requires `a "cross-origin isolated" website <https://web.dev/articles/coop-coep>`__, which may be difficult to set up and is limited for security reasons (such as not being able to communicate with third-party websites).
+
+If ``false``, the exported game will not support threads. As a result, it is more prone to performance and audio issues, but will only require to be run on an HTTPS website.
 
 .. rst-class:: classref-item-separator
 
@@ -316,11 +393,9 @@ The canvas resize policy determines how the canvas should be resized by Godot.
 
 .. rst-class:: classref-property
 
-:ref:`bool<class_bool>` **vram_texture_compression/for_desktop**
+:ref:`bool<class_bool>` **vram_texture_compression/for_desktop** :ref:`🔗<class_EditorExportPlatformWeb_property_vram_texture_compression/for_desktop>`
 
-.. container:: contribute
-
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+If ``true``, allows textures to be optimized for desktop through the S3TC/BPTC algorithm.
 
 .. rst-class:: classref-item-separator
 
@@ -330,16 +405,16 @@ The canvas resize policy determines how the canvas should be resized by Godot.
 
 .. rst-class:: classref-property
 
-:ref:`bool<class_bool>` **vram_texture_compression/for_mobile**
+:ref:`bool<class_bool>` **vram_texture_compression/for_mobile** :ref:`🔗<class_EditorExportPlatformWeb_property_vram_texture_compression/for_mobile>`
 
-.. container:: contribute
-
-	There is currently no description for this property. Please help us by :ref:`contributing one <doc_updating_the_class_reference>`!
+If ``true`` allows textures to be optimized for mobile through the ETC2/ASTC algorithm.
 
 .. |virtual| replace:: :abbr:`virtual (This method should typically be overridden by the user to have any effect.)`
+.. |required| replace:: :abbr:`required (This method is required to be overridden when extending its base class.)`
 .. |const| replace:: :abbr:`const (This method has no side effects. It doesn't modify any of the instance's member variables.)`
 .. |vararg| replace:: :abbr:`vararg (This method accepts any number of arguments after the ones described here.)`
 .. |constructor| replace:: :abbr:`constructor (This method is used to construct a type.)`
 .. |static| replace:: :abbr:`static (This method doesn't need an instance to be called, so it can be called directly using the class name.)`
 .. |operator| replace:: :abbr:`operator (This method describes a valid operator to use with this type as left-hand operand.)`
 .. |bitfield| replace:: :abbr:`BitField (This value is an integer composed as a bitmask of the following flags.)`
+.. |void| replace:: :abbr:`void (No return value.)`
