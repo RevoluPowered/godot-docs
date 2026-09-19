@@ -21,6 +21,15 @@ Description
 
 This texture class allows you to use a 3D texture created directly on the :ref:`RenderingDevice<class_RenderingDevice>` as a texture for materials, meshes, etc.
 
+\ **Note:** **Texture3DRD** is intended for low-level usage with :ref:`RenderingDevice<class_RenderingDevice>`. For most use cases, use :ref:`Texture3D<class_Texture3D>` instead.
+
+.. rst-class:: classref-introduction-group
+
+Tutorials
+---------
+
+- `Compute Texture demo <https://godotengine.org/asset-library/asset/2764>`__
+
 .. rst-class:: classref-reftable-group
 
 Properties
@@ -29,9 +38,9 @@ Properties
 .. table::
    :widths: auto
 
-   +-----------------------+------------------------------------------------------------------+-----------+
-   | :ref:`RID<class_RID>` | :ref:`texture_rd_rid<class_Texture3DRD_property_texture_rd_rid>` | ``RID()`` |
-   +-----------------------+------------------------------------------------------------------+-----------+
+   +-----------------------+------------------------------------------------------------------+
+   | :ref:`RID<class_RID>` | :ref:`texture_rd_rid<class_Texture3DRD_property_texture_rd_rid>` |
+   +-----------------------+------------------------------------------------------------------+
 
 .. rst-class:: classref-section-separator
 
@@ -46,19 +55,21 @@ Property Descriptions
 
 .. rst-class:: classref-property
 
-:ref:`RID<class_RID>` **texture_rd_rid** = ``RID()``
+:ref:`RID<class_RID>` **texture_rd_rid** :ref:`🔗<class_Texture3DRD_property_texture_rd_rid>`
 
 .. rst-class:: classref-property-setget
 
-- void **set_texture_rd_rid** **(** :ref:`RID<class_RID>` value **)**
-- :ref:`RID<class_RID>` **get_texture_rd_rid** **(** **)**
+- |void| **set_texture_rd_rid**\ (\ value\: :ref:`RID<class_RID>`\ )
+- :ref:`RID<class_RID>` **get_texture_rd_rid**\ (\ )
 
 The RID of the texture object created on the :ref:`RenderingDevice<class_RenderingDevice>`.
 
 .. |virtual| replace:: :abbr:`virtual (This method should typically be overridden by the user to have any effect.)`
+.. |required| replace:: :abbr:`required (This method is required to be overridden when extending its base class.)`
 .. |const| replace:: :abbr:`const (This method has no side effects. It doesn't modify any of the instance's member variables.)`
 .. |vararg| replace:: :abbr:`vararg (This method accepts any number of arguments after the ones described here.)`
 .. |constructor| replace:: :abbr:`constructor (This method is used to construct a type.)`
 .. |static| replace:: :abbr:`static (This method doesn't need an instance to be called, so it can be called directly using the class name.)`
 .. |operator| replace:: :abbr:`operator (This method describes a valid operator to use with this type as left-hand operand.)`
 .. |bitfield| replace:: :abbr:`BitField (This value is an integer composed as a bitmask of the following flags.)`
+.. |void| replace:: :abbr:`void (No return value.)`
