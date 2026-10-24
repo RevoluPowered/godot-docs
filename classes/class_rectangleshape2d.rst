@@ -28,9 +28,9 @@ A 2D rectangle shape, intended for use in physics. Usually used to provide a sha
 Tutorials
 ---------
 
-- `2D Pong Demo <https://godotengine.org/asset-library/asset/121>`__
+- `2D Pong Demo <https://godotengine.org/asset-library/asset/2728>`__
 
-- `2D Kinematic Character Demo <https://godotengine.org/asset-library/asset/113>`__
+- `2D Kinematic Character Demo <https://godotengine.org/asset-library/asset/2719>`__
 
 .. rst-class:: classref-reftable-group
 
@@ -57,19 +57,21 @@ Property Descriptions
 
 .. rst-class:: classref-property
 
-:ref:`Vector2<class_Vector2>` **size** = ``Vector2(20, 20)``
+:ref:`Vector2<class_Vector2>` **size** = ``Vector2(20, 20)`` :ref:`🔗<class_RectangleShape2D_property_size>`
 
 .. rst-class:: classref-property-setget
 
-- void **set_size** **(** :ref:`Vector2<class_Vector2>` value **)**
-- :ref:`Vector2<class_Vector2>` **get_size** **(** **)**
+- |void| **set_size**\ (\ value\: :ref:`Vector2<class_Vector2>`\ )
+- :ref:`Vector2<class_Vector2>` **get_size**\ (\ )
 
 The rectangle's width and height.
 
 .. |virtual| replace:: :abbr:`virtual (This method should typically be overridden by the user to have any effect.)`
+.. |required| replace:: :abbr:`required (This method is required to be overridden when extending its base class.)`
 .. |const| replace:: :abbr:`const (This method has no side effects. It doesn't modify any of the instance's member variables.)`
 .. |vararg| replace:: :abbr:`vararg (This method accepts any number of arguments after the ones described here.)`
 .. |constructor| replace:: :abbr:`constructor (This method is used to construct a type.)`
 .. |static| replace:: :abbr:`static (This method doesn't need an instance to be called, so it can be called directly using the class name.)`
 .. |operator| replace:: :abbr:`operator (This method describes a valid operator to use with this type as left-hand operand.)`
 .. |bitfield| replace:: :abbr:`BitField (This value is an integer composed as a bitmask of the following flags.)`
+.. |void| replace:: :abbr:`void (No return value.)`
