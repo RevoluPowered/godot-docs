@@ -19,7 +19,7 @@ Godot editor's popup dialog for creating new :ref:`Script<class_Script>` files.
 Description
 -----------
 
-The **ScriptCreateDialog** creates script files according to a given template for a given scripting language. The standard use is to configure its fields prior to calling one of the :ref:`Window.popup<class_Window_method_popup>` methods.
+The **ScriptCreateDialog** creates script files according to a given template for a given scripting language. The standard use is to configure its fields prior to calling one of the :ref:`Window.popup()<class_Window_method_popup>` methods.
 
 
 .. tabs::
@@ -68,9 +68,9 @@ Methods
 .. table::
    :widths: auto
 
-   +------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | void | :ref:`config<class_ScriptCreateDialog_method_config>` **(** :ref:`String<class_String>` inherits, :ref:`String<class_String>` path, :ref:`bool<class_bool>` built_in_enabled=true, :ref:`bool<class_bool>` load_enabled=true **)** |
-   +------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   +--------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | |void| | :ref:`config<class_ScriptCreateDialog_method_config>`\ (\ inherits\: :ref:`String<class_String>`, path\: :ref:`String<class_String>`, built_in_enabled\: :ref:`bool<class_bool>` = true, load_enabled\: :ref:`bool<class_bool>` = true\ ) |
+   +--------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 .. rst-class:: classref-section-separator
 
@@ -85,7 +85,7 @@ Signals
 
 .. rst-class:: classref-signal
 
-**script_created** **(** :ref:`Script<class_Script>` script **)**
+**script_created**\ (\ script\: :ref:`Script<class_Script>`\ ) :ref:`🔗<class_ScriptCreateDialog_signal_script_created>`
 
 Emitted when the user clicks the OK button.
 
@@ -102,14 +102,16 @@ Method Descriptions
 
 .. rst-class:: classref-method
 
-void **config** **(** :ref:`String<class_String>` inherits, :ref:`String<class_String>` path, :ref:`bool<class_bool>` built_in_enabled=true, :ref:`bool<class_bool>` load_enabled=true **)**
+|void| **config**\ (\ inherits\: :ref:`String<class_String>`, path\: :ref:`String<class_String>`, built_in_enabled\: :ref:`bool<class_bool>` = true, load_enabled\: :ref:`bool<class_bool>` = true\ ) :ref:`🔗<class_ScriptCreateDialog_method_config>`
 
 Prefills required fields to configure the ScriptCreateDialog for use.
 
 .. |virtual| replace:: :abbr:`virtual (This method should typically be overridden by the user to have any effect.)`
+.. |required| replace:: :abbr:`required (This method is required to be overridden when extending its base class.)`
 .. |const| replace:: :abbr:`const (This method has no side effects. It doesn't modify any of the instance's member variables.)`
 .. |vararg| replace:: :abbr:`vararg (This method accepts any number of arguments after the ones described here.)`
 .. |constructor| replace:: :abbr:`constructor (This method is used to construct a type.)`
 .. |static| replace:: :abbr:`static (This method doesn't need an instance to be called, so it can be called directly using the class name.)`
 .. |operator| replace:: :abbr:`operator (This method describes a valid operator to use with this type as left-hand operand.)`
 .. |bitfield| replace:: :abbr:`BitField (This value is an integer composed as a bitmask of the following flags.)`
+.. |void| replace:: :abbr:`void (No return value.)`
