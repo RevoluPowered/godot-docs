@@ -50,12 +50,12 @@ Property Descriptions
 
 .. rst-class:: classref-property
 
-:ref:`int<class_int>` **constant_id** = ``0``
+:ref:`int<class_int>` **constant_id** = ``0`` :ref:`🔗<class_RDPipelineSpecializationConstant_property_constant_id>`
 
 .. rst-class:: classref-property-setget
 
-- void **set_constant_id** **(** :ref:`int<class_int>` value **)**
-- :ref:`int<class_int>` **get_constant_id** **(** **)**
+- |void| **set_constant_id**\ (\ value\: :ref:`int<class_int>`\ )
+- :ref:`int<class_int>` **get_constant_id**\ (\ )
 
 The identifier of the specialization constant. This is a value starting from ``0`` and that increments for every different specialization constant for a given shader.
 
@@ -67,19 +67,21 @@ The identifier of the specialization constant. This is a value starting from ``0
 
 .. rst-class:: classref-property
 
-:ref:`Variant<class_Variant>` **value**
+:ref:`Variant<class_Variant>` **value** :ref:`🔗<class_RDPipelineSpecializationConstant_property_value>`
 
 .. rst-class:: classref-property-setget
 
-- void **set_value** **(** :ref:`Variant<class_Variant>` value **)**
-- :ref:`Variant<class_Variant>` **get_value** **(** **)**
+- |void| **set_value**\ (\ value\: :ref:`Variant<class_Variant>`\ )
+- :ref:`Variant<class_Variant>` **get_value**\ (\ )
 
 The specialization constant's value. Only :ref:`bool<class_bool>`, :ref:`int<class_int>` and :ref:`float<class_float>` types are valid for specialization constants.
 
 .. |virtual| replace:: :abbr:`virtual (This method should typically be overridden by the user to have any effect.)`
+.. |required| replace:: :abbr:`required (This method is required to be overridden when extending its base class.)`
 .. |const| replace:: :abbr:`const (This method has no side effects. It doesn't modify any of the instance's member variables.)`
 .. |vararg| replace:: :abbr:`vararg (This method accepts any number of arguments after the ones described here.)`
 .. |constructor| replace:: :abbr:`constructor (This method is used to construct a type.)`
 .. |static| replace:: :abbr:`static (This method doesn't need an instance to be called, so it can be called directly using the class name.)`
 .. |operator| replace:: :abbr:`operator (This method describes a valid operator to use with this type as left-hand operand.)`
 .. |bitfield| replace:: :abbr:`BitField (This value is an integer composed as a bitmask of the following flags.)`
+.. |void| replace:: :abbr:`void (No return value.)`
